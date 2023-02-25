@@ -1,65 +1,23 @@
-public static void main(String[] args) {
+fun main() {
+    println("enter a number within the range of 1 through 10")
+    val number = readln().toInt()
 
-    // Create a Scanner object for keyboard input.
-    Scanner keyboard = new Scanner(System.in);
-
-    // Get a number from the user.
-    System.out.print("Enter a number in the range of 1 - 10: ");
-
-    int number = keyboard.nextInt(); // User inputed number
-
-    //close stream
-    keyboard.close();
-
-    // Get Roman numeral.
-    String romanNumerals = convertNumberToRomanNumeral(number);
-
-    // Output to user
-    System.out.println(romanNumerals);
-}
-
-/**
- * Method should return a Roman numeral that represents
- * the number input.
- *
- * @param number
- * @return String that represents a Roman numeral
- */
-static String convertNumberToRomanNumeral(Integer number) {
-
-    switch (number) {
-    case 1:
-        return "I";
-
-    case 2:
-        return "II";
-
-    case 3:
-        return "III";
-
-    case 4:
-        return "IV";
-
-    case 5:
-        return "V";
-
-    case 6:
-        return "VI";
-
-    case 7:
-        return "VII";
-
-    case 8:
-        return "VIII";
-
-    case 9:
-        return "IX";
-
-    case 10:
-        return "X";
-
-    default:
-        return "Invalid number.";
-
+    if(number > 10 || number < 0) {
+        println("error, the number is not valid");
+        return;
     }
+
+    if (number == 1) println("I")
+    else if( number == 2) println("II")
+    else if( number == 3) println("III")
+    else if( number == 4) println("IV")
+    else if( number == 5) println("V")
+    else if( number == 6) println("VI")
+    else if( number == 7) println("VII")
+    else if( number == 8) println("VIII")
+    else if( number == 9) println("IX")
+    else if( number == 10) println("X")
+
+
+
 }
